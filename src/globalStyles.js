@@ -7,7 +7,6 @@ body {
     background: teal;
     font-family:  Open-Sans, Helvetica, Sans-Serif;
     overflow-x: hidden;
-    color: #fff;
   }
 `;
 export default GlobalStyle;
