@@ -4,9 +4,9 @@ const GlobalStyle = createGlobalStyle`
 body {
     margin: 0;
     padding: 0;
-    background: teal;
     font-family:  Open-Sans, Helvetica, Sans-Serif;
     overflow-x: hidden;
+    background-color: #000;
   }
 `;
 export default GlobalStyle;
