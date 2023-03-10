@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const MenuArea = styled.div`
@@ -18,11 +19,13 @@ export const LogoArea = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 100px;
+  margin-top: -8px;
 `;
 export const LogoName = styled.h1`
   color: #fff;
   font-weight: bold;
   font-size: 18px;
+  font-family: orbitron;
 `;
 export const MenuList = styled.ul`
   display: flex;
@@ -36,11 +39,8 @@ export const MenuList = styled.ul`
 `;
 
 export const MenuItem = styled.li`
-  color: #fff;
   height: 30px;
-  font-size: 18px;
-  font-weight: ${(props) => (props.active ? "bold" : "normal")};
+  color: #fff;
   cursor: pointer;
-  color: ${(props) => (props.active ? "#ecaf35" : "#fff")};
-  border-bottom: ${(props) => (props.active ? "2px solid #ecaf35" : 0)};
+  color: ${(props) => (props.className === "active" ? "#ecaf35" : "#fff")};
 `;

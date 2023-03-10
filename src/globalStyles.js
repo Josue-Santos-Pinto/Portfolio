@@ -7,6 +7,7 @@ body {
     font-family:  Open-Sans, Helvetica, Sans-Serif;
     overflow-x: hidden;
     background-color: #000;
+    text-decoration: none;
   }
 `;
 export default GlobalStyle;

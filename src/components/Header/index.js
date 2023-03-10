@@ -1,13 +1,11 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import { MenuArea, LogoArea, LogoName, MenuList, MenuItem } from "./styles";
 
 import { FaRegMoon } from "react-icons/fa";
-import { Link } from "react-scroll";
 
 export function Header() {
-  const [active, setActive] = useState(false);
-
   return (
     <MenuArea>
       <LogoArea>
@@ -15,57 +13,74 @@ export function Header() {
       </LogoArea>
       <MenuList>
         <MenuItem>
-          <Link
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            onClick={() => setActive(true)}
+          <NavLink
+            style={({ isActive }) => {
+              return {
+                color: isActive ? "#ecaf35" : "#fff",
+                borderBottom: isActive ? "2px solid #ecaf35" : 0,
+                textDecoration: "none",
+              };
+            }}
+            to="/"
           >
             Inicio
-          </Link>
-        </MenuItem>
-        <MenuItem onClick={() => setActive(true)} active={active}>
-          <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
-            Sobre mim
-          </Link>
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            onClick={() => setActive(true)}
+          <NavLink
+            style={({ isActive }) => {
+              return {
+                color: isActive ? "#ecaf35" : "#fff",
+                borderBottom: isActive ? "2px solid #ecaf35" : 0,
+                textDecoration: "none",
+              };
+            }}
+            to="/about"
+          >
+            Sobre mim
+          </NavLink>
+        </MenuItem>
+        <MenuItem>
+          <NavLink
+            style={({ isActive }) => {
+              return {
+                color: isActive ? "#ecaf35" : "#fff",
+                borderBottom: isActive ? "2px solid #ecaf35" : 0,
+                textDecoration: "none",
+              };
+            }}
+            to="/projects"
           >
             Projetos
-          </Link>
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link
-            to="skills"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            onClick={() => setActive(true)}
+          <NavLink
+            style={({ isActive }) => {
+              return {
+                color: isActive ? "#ecaf35" : "#fff",
+                borderBottom: isActive ? "2px solid #ecaf35" : 0,
+                textDecoration: "none",
+              };
+            }}
+            to="/skills"
           >
             Habilidades
-          </Link>
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
-            onClick={() => setActive(true)}
+          <NavLink
+            style={({ isActive }) => {
+              return {
+                color: isActive ? "#ecaf35" : "#fff",
+                borderBottom: isActive ? "2px solid #ecaf35" : 0,
+                textDecoration: "none",
+              };
+            }}
+            to="/contact"
           >
             Contate-me
-          </Link>
+          </NavLink>
         </MenuItem>
         <MenuItem>
           <FaRegMoon />
