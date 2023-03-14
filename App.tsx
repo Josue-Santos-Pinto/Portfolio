@@ -1,9 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import { Home } from './src/screens/Home';
+import { Theme } from './src/templates/theme';
+
 export default () => {
   return (
-    <View>
-      <Text>Olá mundo</Text>
-    </View>
+    <Theme>
+      <Home />
+    </Theme>
   );
 };
