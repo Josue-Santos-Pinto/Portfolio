@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { StatusBar } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
+
 import * as S from './styles';
 
 import Swiper from 'react-native-swiper';
@@ -10,9 +12,10 @@ import Hi from '../../assets/lottie/hi.json';
 import UsingPc from '../../assets/lottie/using-pc.json';
 
 export function Welcome() {
-  const [savePoint, setSavePoint] = useState(false);
   const firstRun = useRef(true);
   const animation = useRef<any>(null);
+
+  const navigation = useNavigation();
 
   useEffect(() => {
     const animationFunction = () => {
@@ -58,7 +61,9 @@ export function Welcome() {
           </S.LottieArea>
 
           <S.KnowMoreButtonArea>
-            <S.KnowMoreButton>
+            <S.KnowMoreButton
+              onPress={() => navigation.reset({ index: 1, routes: [{ name: 'MainDrawer' }] })}
+            >
               <S.KnowMoreButtonText>Vamos lá</S.KnowMoreButtonText>
             </S.KnowMoreButton>
           </S.KnowMoreButtonArea>

@@ -2,7 +2,7 @@ import { Dimensions } from 'react-native';
 
 export default {
   colors: {
-    primary: '#333',
+    primary: '#575454',
     textColor: '#fafafa',
   },
   sizes: {

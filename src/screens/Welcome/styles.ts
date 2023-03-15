@@ -8,13 +8,11 @@ export const Container = styled.View`
 `;
 
 export const Dot = styled.View`
-  ${({ theme }) => css`
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-    background-color: #ccc;
-    margin: 5px;
-  `}
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #ccc;
+  margin: 5px;
 `;
 export const EnableDot = styled.View`
   ${({ theme }) => css`
@@ -30,13 +28,11 @@ export const CardItem = styled.View`
   ${({ theme }) => css``}
 `;
 export const TextArea = styled.View`
-  ${({ theme }) => css`
-    width: 100%;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  `}
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 `;
 export const Title = styled.Text`
   ${({ theme }) => css`
@@ -61,22 +57,18 @@ export const WelcomeText = styled.Text`
 `;
 
 export const LottieArea = styled.View`
-  ${({ theme }) => css`
-    width: 100%;
-    height: 400px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-  `}
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 `;
 
 export const KnowMoreButtonArea = styled.View`
-  ${({ theme }) => css`
-    width: 100%;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-  `}
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const KnowMoreButton = styled.TouchableOpacity`
