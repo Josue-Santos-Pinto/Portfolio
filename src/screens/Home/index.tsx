@@ -4,7 +4,7 @@ import * as S from './styles';
 export function Home() {
   return (
     <S.Container>
-      <S.Title>Olá mundo</S.Title>
+      <S.Title>Home</S.Title>
     </S.Container>
   );
 }

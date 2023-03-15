@@ -7,5 +7,5 @@ type Props = {
 };
 
 export function Theme({ children }: Props) {
-  return <ThemeProvider theme={theme.dark}>{children}</ThemeProvider>;
+  return <ThemeProvider theme={theme.light}>{children}</ThemeProvider>;
 }
