@@ -62,7 +62,7 @@ export function Welcome() {
 
           <S.KnowMoreButtonArea>
             <S.KnowMoreButton
-              onPress={() => navigation.reset({ index: 1, routes: [{ name: 'MainDrawer' }] })}
+              onPress={() => navigation.reset({ index: 1, routes: [{ name: 'MainTab' }] })}
             >
               <S.KnowMoreButtonText>Vamos lá</S.KnowMoreButtonText>
             </S.KnowMoreButton>
