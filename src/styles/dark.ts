@@ -4,6 +4,7 @@ export default {
   colors: {
     primary: '#575454',
     textColor: '#fafafa',
+    textSecundaryColor: '#000',
   },
   sizes: {
     fullW: Dimensions.get('window').width,

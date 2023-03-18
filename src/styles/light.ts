@@ -2,8 +2,9 @@ import { Dimensions } from 'react-native';
 
 export default {
   colors: {
-    primary: '#fafafa',
+    primary: '#fff',
     textColor: '#333',
+    textSecundaryColor: '#fff',
   },
   sizes: {
     fullW: Dimensions.get('window').width,
