@@ -4,6 +4,8 @@ export const Container = styled.View`
   ${({ theme }) => css`
     flex: 1;
     background-color: ${theme.colors.primary};
+    padding-top: 15px;
+    padding-bottom: 15px;
   `}
 `;
 
@@ -39,6 +41,7 @@ export const Title = styled.Text`
     color: ${theme.colors.textColor};
     font-size: ${theme.sizes.fontSBig}px;
     margin-left: 5px;
+    text-align: center;
   `}
 `;
 export const SubTitle = styled.Text`
@@ -58,10 +61,10 @@ export const WelcomeText = styled.Text`
 
 export const LottieArea = styled.View`
   width: 100%;
-  height: 400px;
+  height: 55%;
+  min-height: 250px;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
 `;
 
 export const KnowMoreButtonArea = styled.View`

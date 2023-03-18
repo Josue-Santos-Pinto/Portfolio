@@ -31,7 +31,7 @@ export function Welcome() {
 
   return (
     <S.Container>
-      <StatusBar barStyle="dark-content" backgroundColor="transparent" />
+      <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
       <Swiper loop={false} dot={<S.Dot />} activeDot={<S.EnableDot />}>
         <S.CardItem>
           <S.TextArea>

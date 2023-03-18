@@ -1,10 +1,10 @@
 import React from 'react';
 import * as S from './styles';
 
-export function Home() {
+export function Skills() {
   return (
     <S.Container>
-      <S.Title>Home</S.Title>
+      <S.Title>Skills</S.Title>
     </S.Container>
   );
 }
