@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components/native';
 import { Platform, StatusBar } from 'react-native';
+import { ThemeStyles } from '../../styles';
 
 const statuBarHeight = StatusBar.currentHeight;
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #171626;
+  background-color: ${ThemeStyles.colors.bg};
   padding-top: ${Platform.OS === 'android' ? statuBarHeight : 25}px;
 `;
 export const Scroller = styled.ScrollView``;
