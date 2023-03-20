@@ -22,25 +22,16 @@ export function Skills() {
     <S.Container>
       <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
         <S.HeaderArea>
-          <S.HeaderTitle>Habilidades</S.HeaderTitle>
+          <S.HeaderTitle>Tecnologias</S.HeaderTitle>
         </S.HeaderArea>
-        <Animatable.View
-          animation="flipInX"
-          style={{
-            flex: 1,
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            marginBottom: 80,
-          }}
-        >
+        <S.BodyArea>
           {iconSkills.map((item, key) => (
             <SkillItem key={key} data={item} />
           ))}
           {materialIconSkills.map((item, key) => (
             <SkillItem key={key} data={item} />
           ))}
-        </Animatable.View>
+        </S.BodyArea>
       </ScrollView>
     </S.Container>
   );

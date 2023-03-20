@@ -4,12 +4,12 @@ import { ThemeStyles } from '../../styles';
 export const Container = styled.View`
   flex: 1;
   background-color: ${ThemeStyles.colors.bg};
-  padding: 30px;
+  padding-horizontal: 30px;
 `;
 
 export const HeaderArea = styled.View`
   width: 100%;
-  height: 100px;
+  height: 80px;
   justify-content: center;
   align-items: center;
 `;
@@ -24,4 +24,5 @@ export const BodyArea = styled.View`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 80px;
 `;
