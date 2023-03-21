@@ -23,6 +23,7 @@ export const HeaderArea = styled.View`
 export const HeaderTitle = styled.Text`
   color: #fff;
   font-size: 20px;
+  font-weight: bold;
   margin-top: 10px;
 `;
 export const HeaderSubTitle = styled.Text`

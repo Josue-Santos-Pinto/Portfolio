@@ -11,16 +11,6 @@ type Props = {
   };
 };
 
-const Item = styled.View`
-  width: 130px;
-  height: 130px;
-  border-radius: 40px;
-  background-color: rgba(255, 255, 255, 0.9);
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-`;
-
 export function SkillItem({ data }: Props) {
   return (
     <Animatable.View
