@@ -6,15 +6,16 @@ import * as S from './styles';
 import * as Animatable from 'react-native-animatable';
 
 const iconSkills = [
-  { name: 'logo-html5', color: 'red' },
-  { name: 'logo-css3', color: 'blue' },
-  { name: 'logo-javascript', color: 'yellow' },
-  { name: 'logo-react', color: 'purple' },
-  { name: 'logo-nodejs', color: 'green' },
+  { name: 'logo-html5', color: '#e9642a' },
+  { name: 'logo-css3', color: '#0085c4' },
+  { name: 'logo-javascript', color: '#f7c327' },
+  { name: 'logo-react', color: '#423170' },
+  { name: 'logo-firebase', color: '#f7c52a' },
+  { name: 'logo-nodejs', color: '#8bbf3d' },
 ];
 const materialIconSkills = [
   { name: 'database', color: 'grey' },
-  { name: 'git', color: 'red' },
+  { name: 'git', color: '#e84d31' },
 ];
 
 export function Skills() {

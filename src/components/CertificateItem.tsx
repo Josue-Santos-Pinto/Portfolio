@@ -29,9 +29,11 @@ const InfoArea = styled.View`
 const CertificateName = styled.Text`
   font-size: 25px;
   font-weight: bold;
+  color: #2c2a45;
 `;
 const CertificateHours = styled.Text`
   font-size: 18px;
+  color: #2c2a45;
 `;
 
 export function CertificateItem({ data }: Props) {
