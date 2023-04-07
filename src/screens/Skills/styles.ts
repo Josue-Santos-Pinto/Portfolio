@@ -12,6 +12,7 @@ export const HeaderArea = styled.View`
   height: 80px;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 `;
 
 export const HeaderTitle = styled.Text`
