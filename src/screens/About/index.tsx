@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as S from './styles';
-import { StatusBar } from 'react-native';
+import { StatusBar, Linking } from 'react-native';
 import * as Animatable from 'react-native-animatable';
+import storage from '@react-native-firebase/storage';
 
 export function About() {
+  const [link, setLink] = useState('');
+
+  useEffect(() => {
+    const getUrl = async () => {
+      const url = await storage().ref('Curriculo react native.docx').getDownloadURL();
+      setLink(url);
+    };
+    getUrl();
+  }, []);
+
   return (
     <S.Container>
       <S.Scroller showsVerticalScrollIndicator={false}>
@@ -79,7 +90,7 @@ export function About() {
             </S.AboutItemInfoArea>
           </S.AboutItem>
 
-          <S.ButtonArea>
+          <S.ButtonArea onPress={() => Linking.openURL(link)}>
             <S.ButtonText>Baixar Curriculo</S.ButtonText>
           </S.ButtonArea>
         </Animatable.View>

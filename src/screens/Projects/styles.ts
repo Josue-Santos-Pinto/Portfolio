@@ -27,3 +27,8 @@ export const BodyArea = styled.View`
   justify-content: center;
   margin-bottom: 80px;
 `;
+export const LoadingArea = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;

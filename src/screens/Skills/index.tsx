@@ -11,7 +11,6 @@ const iconSkills = [
   { name: 'logo-javascript', color: '#f7c327' },
   { name: 'logo-react', color: '#423170' },
   { name: 'logo-firebase', color: '#f7c52a' },
-  { name: 'logo-nodejs', color: '#8bbf3d' },
 ];
 const materialIconSkills = [
   { name: 'database', color: 'grey' },

@@ -9,7 +9,7 @@ type Props = {
   data: {
     name: string;
     desc: string;
-    img: HTMLImageElement;
+    img: string;
     techs: string[];
     links: {
       playstore?: string;
@@ -127,10 +127,10 @@ export function ProjectItem({ data }: Props) {
           setModal(!modal);
         }}
       >
-        <ProjectImage source={data.img} resizeMode="contain" />
+        <ProjectImage source={{ uri: data.img }} resizeMode="contain" />
       </ImageArea>
       <Modal visible={modal} onRequestClose={() => setModal(false)} animationType="fade">
-        <ModalProjectNameArea source={data.img} resizeMode="cover">
+        <ModalProjectNameArea source={{ uri: data.img }} resizeMode="cover">
           <ModalBgName>
             <BackButtonArea onPress={() => setModal(false)}>
               <Icon name="chevron-back" size={25} color="#fff" />
