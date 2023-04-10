@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "522579067336",
+    "project_id": "meuportfolio-a9569",
+    "storage_bucket": "meuportfolio-a9569.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522579067336:android:929daa97cb67c24db240fd",
+        "android_client_info": {
+          "package_name": "com.josue_portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522579067336-4bsfro9kp6p1u50qjb02jm2st70lildi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSEubqv46VVsjw2O-hOkQUWy4Bp1pfhFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522579067336-4bsfro9kp6p1u50qjb02jm2st70lildi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
