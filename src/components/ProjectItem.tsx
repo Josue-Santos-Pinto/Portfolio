@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 import { Modal, Linking, StatusBar, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import * as Animatable from 'react-native-animatable';
 
 type Props = {
   data: {
@@ -107,7 +108,8 @@ export function ProjectItem({ data }: Props) {
   const [modal, setModal] = useState(false);
 
   return (
-    <View
+    <Animatable.View
+      animation="flipInX"
       style={{
         width: '43%',
         height: 230,
@@ -159,6 +161,6 @@ export function ProjectItem({ data }: Props) {
           )}
         </ButtonsLinksArea>
       </Modal>
-    </View>
+    </Animatable.View>
   );
 }

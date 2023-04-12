@@ -1,9 +1,8 @@
 import styled from 'styled-components/native';
-import { ThemeStyles } from '../../styles';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${ThemeStyles.colors.bg};
+  background-color: #2c2a45;
   padding: 30px;
   align-items: center;
   flex-align: column;

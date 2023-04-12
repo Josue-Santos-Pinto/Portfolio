@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import * as Animatable from 'react-native-animatable';
 
 type Props = {
   data: {
@@ -13,7 +14,8 @@ type Props = {
 
 export function SkillItem({ data }: Props) {
   return (
-    <View
+    <Animatable.View
+      animation="flipInX"
       style={{
         width: 130,
         height: 130,
@@ -29,6 +31,6 @@ export function SkillItem({ data }: Props) {
       ) : (
         <Icon name={data.name} color={data.color} size={50} />
       )}
-    </View>
+    </Animatable.View>
   );
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 import { View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import * as Animatable from 'react-native-animatable';
 
 type Props = {
   data: {
@@ -38,7 +39,8 @@ const CertificateHours = styled.Text`
 
 export function CertificateItem({ data }: Props) {
   return (
-    <View
+    <Animatable.View
+      animation="flipInX"
       style={{
         width: '95%',
         height: 160,
@@ -60,6 +62,6 @@ export function CertificateItem({ data }: Props) {
         <CertificateName>{data.name}</CertificateName>
         <CertificateHours>{data.hours} Horas</CertificateHours>
       </InfoArea>
-    </View>
+    </Animatable.View>
   );
 }

@@ -3,7 +3,20 @@ import { StatusBar } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
-import * as S from './styles';
+import {
+  CardItem,
+  Container,
+  Dot,
+  EnableDot,
+  KnowMoreButton,
+  KnowMoreButtonArea,
+  KnowMoreButtonText,
+  LottieArea,
+  SubTitle,
+  TextArea,
+  Title,
+  WelcomeText,
+} from './styles';
 
 import Swiper from 'react-native-swiper';
 import LottieView from 'lottie-react-native';
@@ -30,27 +43,27 @@ export function Welcome() {
   }, [animation]);
 
   return (
-    <S.Container>
+    <Container>
       <StatusBar barStyle="dark-content" backgroundColor="transparent" translucent />
-      <Swiper loop={false} dot={<S.Dot />} activeDot={<S.EnableDot />}>
-        <S.CardItem>
-          <S.TextArea>
-            <S.Title>Olá, bem vindo ao meu portfólio</S.Title>
-          </S.TextArea>
+      <Swiper loop={false} dot={<Dot />} activeDot={<EnableDot />}>
+        <CardItem>
+          <TextArea>
+            <Title>Olá, bem vindo ao meu portfólio</Title>
+          </TextArea>
 
-          <S.LottieArea>
+          <LottieArea>
             <LottieView source={Hi} loop autoPlay style={{ width: 400, height: 400 }} />
-          </S.LottieArea>
-        </S.CardItem>
+          </LottieArea>
+        </CardItem>
 
-        <S.CardItem>
-          <S.TextArea>
-            <S.Title>Meu nome é Josué</S.Title>
-            <S.SubTitle>Desenvolvedor Mobile - React Native</S.SubTitle>
-            <S.WelcomeText>Venha conhecer mais sobre mim</S.WelcomeText>
-          </S.TextArea>
+        <CardItem>
+          <TextArea>
+            <Title>Meu nome é Josué</Title>
+            <SubTitle>Desenvolvedor Mobile - React Native</SubTitle>
+            <WelcomeText>Venha conhecer mais sobre mim</WelcomeText>
+          </TextArea>
 
-          <S.LottieArea>
+          <LottieArea>
             <LottieView
               source={UsingPc}
               loop
@@ -58,17 +71,17 @@ export function Welcome() {
               style={{ width: 400, height: 400 }}
               ref={animation}
             />
-          </S.LottieArea>
+          </LottieArea>
 
-          <S.KnowMoreButtonArea>
-            <S.KnowMoreButton
+          <KnowMoreButtonArea>
+            <KnowMoreButton
               onPress={() => navigation.reset({ index: 1, routes: [{ name: 'MainTab' }] })}
             >
-              <S.KnowMoreButtonText>Vamos lá</S.KnowMoreButtonText>
-            </S.KnowMoreButton>
-          </S.KnowMoreButtonArea>
-        </S.CardItem>
+              <KnowMoreButtonText>Vamos lá</KnowMoreButtonText>
+            </KnowMoreButton>
+          </KnowMoreButtonArea>
+        </CardItem>
       </Swiper>
-    </S.Container>
+    </Container>
   );
 }

@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import * as S from './styles';
 import { StatusBar, Linking, Image, View } from 'react-native';
 import storage from '@react-native-firebase/storage';
+import * as Animatable from 'react-native-animatable';
 
 export function About() {
   const [link, setLink] = useState('');
 
   useEffect(() => {
     const getUrl = async () => {
-      const url = await storage().ref('Curriculo react native.docx').getDownloadURL();
+      const url = await storage().ref('Curriculoreactnative.docx').getDownloadURL();
       setLink(url);
     };
     getUrl();
@@ -19,7 +20,8 @@ export function About() {
       <S.Scroller showsVerticalScrollIndicator={false}>
         <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
         <S.HeaderArea>
-          <Image
+          <Animatable.Image
+            animation="flipInY"
             style={{ width: '70%', height: 260, borderRadius: 160 }}
             source={require('../../assets/images/perfil.jpeg')}
             resizeMode="cover"
@@ -28,7 +30,9 @@ export function About() {
           <S.HeaderSubTitle>Desenvolvedor Mobile - React Native</S.HeaderSubTitle>
         </S.HeaderArea>
 
-        <View
+        <Animatable.View
+          delay={600}
+          animation="fadeInUp"
           style={{
             flex: 1,
             width: '100%',
@@ -89,7 +93,7 @@ export function About() {
           <S.ButtonArea onPress={() => Linking.openURL(link)}>
             <S.ButtonText>Baixar Curriculo</S.ButtonText>
           </S.ButtonArea>
-        </View>
+        </Animatable.View>
       </S.Scroller>
     </S.Container>
   );
