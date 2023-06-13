@@ -3,6 +3,7 @@ import * as S from './styles';
 import { StatusBar, Linking, Image, View } from 'react-native';
 import storage from '@react-native-firebase/storage';
 import * as Animatable from 'react-native-animatable';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export function About() {
   const [link, setLink] = useState('');
@@ -18,19 +19,29 @@ export function About() {
   return (
     <S.Container>
       <S.Scroller showsVerticalScrollIndicator={false}>
-        <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+        <StatusBar barStyle="light-content" />
         <S.HeaderArea>
-          <Animatable.Image
-            animation="flipInY"
-            style={{ width: '70%', height: 260, borderRadius: 160 }}
-            source={require('../../assets/images/perfil.jpeg')}
-            resizeMode="cover"
-          />
-          <S.HeaderTitle>Josué Santos Pinto</S.HeaderTitle>
-          <S.HeaderSubTitle>Desenvolvedor Mobile - React Native</S.HeaderSubTitle>
+          <S.HeaderSubTitle>Olá, eu sou o Josué</S.HeaderSubTitle>
+          <S.HeaderTitle>Desenvolvedor</S.HeaderTitle>
+          <S.HeaderTitle>React Native</S.HeaderTitle>
+          <S.HeaderSubTitle>
+            Tenho 23 anos sou um desenvolvedor mobile com 1 ano de experiência como freelancer{' '}
+          </S.HeaderSubTitle>
         </S.HeaderArea>
 
-        <Animatable.View
+        <S.SocialMediaArea>
+          <S.SocialMediaItem>
+            <FontAwesome name="github" color="#d1bf8c" size={50} />
+          </S.SocialMediaItem>
+          <S.SocialMediaItem>
+            <FontAwesome name="linkedin-square" color="#d1bf8c" size={50} />
+          </S.SocialMediaItem>
+          <S.SocialMediaItem>
+            <FontAwesome name="file-text" color="#d1bf8c" size={40} />
+          </S.SocialMediaItem>
+        </S.SocialMediaArea>
+
+        {/*<Animatable.View
           delay={600}
           animation="fadeInUp"
           style={{
@@ -38,25 +49,12 @@ export function About() {
             width: '100%',
             justifyContent: 'center',
             alignItems: 'center',
-            marginTop: -20,
             borderTopLeftRadius: 20,
             borderTopRightRadius: 20,
             backgroundColor: '#fff',
             paddingBottom: 100,
           }}
         >
-          <S.AboutItem>
-            <S.AboutItemInfoName>Objetivo</S.AboutItemInfoName>
-            <S.AboutItemInfoArea style={{}}>
-              <S.AboutItemInfoLabel>
-                Ingressar em uma empresa que utilize React Native para desenvolvimento de
-                aplicativos, aplicar meus conhecimentos em programação, crescer profissionalmente,
-                aprender continuamente e trabalhar em equipe com outros desenvolvedores talentosos e
-                comprometidos com a excelência técnica.
-              </S.AboutItemInfoLabel>
-            </S.AboutItemInfoArea>
-          </S.AboutItem>
-
           <S.AboutItem>
             <S.AboutItemInfoName>Formação</S.AboutItemInfoName>
             <S.AboutItemInfoValue style={{ textAlign: 'center', fontSize: 18, marginTop: 10 }}>
@@ -93,7 +91,7 @@ export function About() {
           <S.ButtonArea onPress={() => Linking.openURL(link)}>
             <S.ButtonText>Baixar Curriculo</S.ButtonText>
           </S.ButtonArea>
-        </Animatable.View>
+        </Animatable.View>*/}
       </S.Scroller>
     </S.Container>
   );

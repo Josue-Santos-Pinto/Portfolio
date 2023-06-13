@@ -1,33 +1,33 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StatusBar } from 'react-native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Certificate } from '../screens/Certificate';
 import { About } from '../screens/About';
 import { Contact } from '../screens/Contact';
 import { Skills } from '../screens/Skills';
 import { Projects } from '../screens/Projects';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-import Icon from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+type TopTabNavigator = {
+  About: undefined;
+  Skills: undefined;
+  Certificate: undefined;
+  Projects: undefined;
+  Contact: undefined;
+};
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialTopTabNavigator<TopTabNavigator>();
 
 export default () => {
   return (
     <Tab.Navigator
       initialRouteName="About"
       screenOptions={{
-        headerShown: false,
-        tabBarShowLabel: false,
         tabBarStyle: {
-          position: 'absolute',
-          backgroundColor: '#171626',
           borderTopWidth: 0,
-          bottom: 14,
-          left: 14,
-          right: 14,
           elevation: 0,
-          borderRadius: 4,
           height: 60,
+          justifyContent: 'center',
         },
       }}
     >
@@ -35,60 +35,40 @@ export default () => {
         name="About"
         component={About}
         options={{
-          tabBarIcon: ({ color, size, focused }) => {
-            if (focused) {
-              return <Icon name="person" size={size + 7} color={color} />;
-            }
-            return <Icon name="person-outline" size={size} color={color} />;
+          tabBarIcon: ({ color, focused }) => {
+            return <Icon name="user" size={22} color={focused ? 'green' : '#272727'} />;
           },
+          tabBarLabelStyle: { display: 'none' },
         }}
       />
       <Tab.Screen
         name="Skills"
         component={Skills}
         options={{
-          tabBarIcon: ({ color, size, focused }) => {
-            if (focused) {
-              return <Icon name="code-slash" size={size + 7} color="red" />;
-            }
-            return <Icon name="code-slash-outline" size={size} color={color} />;
+          tabBarIcon: ({ color, focused }) => {
+            return <Icon name="code" size={22} color={focused ? 'green' : '#272727'} />;
           },
+          tabBarLabelStyle: { display: 'none' },
         }}
       />
       <Tab.Screen
         name="Certificate"
         component={Certificate}
         options={{
-          tabBarIcon: ({ color, size, focused }) => {
-            if (focused) {
-              return <MaterialCommunityIcons name="certificate" size={size + 10} color="purple" />;
-            }
-            return <MaterialCommunityIcons name="certificate-outline" size={size} color={color} />;
+          tabBarIcon: ({ color, focused }) => {
+            return <Icon name="home" size={22} color={focused ? 'green' : '#272727'} />;
           },
+          tabBarLabelStyle: { display: 'none' },
         }}
       />
       <Tab.Screen
         name="Projects"
         component={Projects}
         options={{
-          tabBarIcon: ({ color, size, focused }) => {
-            if (focused) {
-              return <MaterialCommunityIcons name="lightbulb-on" size={size + 7} color="yellow" />;
-            }
-            return <MaterialCommunityIcons name="lightbulb-on-outline" size={size} color={color} />;
+          tabBarIcon: ({ color, focused }) => {
+            return <Icon name="home" size={22} color={focused ? 'green' : '#272727'} />;
           },
-        }}
-      />
-      <Tab.Screen
-        name="Contact"
-        component={Contact}
-        options={{
-          tabBarIcon: ({ color, size, focused }) => {
-            if (focused) {
-              return <Icon name="md-mail" size={size + 7} color="#fff" />;
-            }
-            return <Icon name="md-mail-outline" size={size} color={color} />;
-          },
+          tabBarLabelStyle: { display: 'none' },
         }}
       />
     </Tab.Navigator>

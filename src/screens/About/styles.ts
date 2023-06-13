@@ -14,21 +14,38 @@ export const Scroller = styled.ScrollView``;
 export const HeaderArea = styled.View`
   width: 100%;
   min-height: 280px;
-  justify-content: center;
-  align-items: center;
+
   margin-top: 5px;
-  padding-vertical: 30px;
+  padding-vertical: 10px;
+  padding-horizontal: 20px;
 `;
 
 export const HeaderTitle = styled.Text`
   color: #fff;
-  font-size: 20px;
+  font-size: 40px;
+  text-transform: uppercase;
   font-weight: bold;
-  margin-top: 10px;
 `;
 export const HeaderSubTitle = styled.Text`
   color: #fff;
   font-size: 15px;
+  margin-top: 5px;
+`;
+
+export const SocialMediaArea = styled.View`
+  width: 100%;
+  height: 100px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -80px;
+`;
+export const SocialMediaItem = styled.TouchableOpacity`
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const AboutItem = styled.View`
