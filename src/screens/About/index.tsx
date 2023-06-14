@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styles';
-import { StatusBar, Linking, Image, View } from 'react-native';
+import { Linking, Image, View } from 'react-native';
 import storage from '@react-native-firebase/storage';
 import * as Animatable from 'react-native-animatable';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -18,7 +18,6 @@ export function About() {
 
   return (
     <S.Container>
-      <StatusBar backgroundColor="#fff" barStyle="dark-content" />
       <S.Scroller showsVerticalScrollIndicator={false}>
         <S.HeaderArea>
           <S.HeaderSubTitle>Olá, eu sou o Josué</S.HeaderSubTitle>

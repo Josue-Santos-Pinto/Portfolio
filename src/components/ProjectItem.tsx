@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/native';
-import { Modal, Linking, StatusBar, View } from 'react-native';
+import { Modal, Linking, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import * as Animatable from 'react-native-animatable';
@@ -120,7 +120,6 @@ export function ProjectItem({ data }: Props) {
         alignItems: 'center',
       }}
     >
-      <StatusBar backgroundColor="#2c2a45" />
       <ProjectName>{data.name}</ProjectName>
       <ImageArea
         onPress={() => {

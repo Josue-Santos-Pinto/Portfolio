@@ -1,9 +1,8 @@
 import React from 'react';
-import { StatusBar, View } from 'react-native';
+import { View } from 'react-native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Certificate } from '../screens/Certificate';
 import { About } from '../screens/About';
-import { Contact } from '../screens/Contact';
 import { Skills } from '../screens/Skills';
 import { Projects } from '../screens/Projects';
 import Icon from 'react-native-vector-icons/FontAwesome';
