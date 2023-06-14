@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import styled from 'styled-components/native';
 
 const Container = styled.View`
@@ -8,15 +9,10 @@ const Container = styled.View`
   background-color: #fff;
 `;
 
-const Logo = styled.Text`
-  font-size: 20px;
-  font-weight: bold;
-`;
-
 export default function PortfolioLogo() {
   return (
     <Container>
-      <Logo>MyPortfolio</Logo>
+      <Text style={{ fontFamily: 'RockSalt-Regular', fontSize: 20 }}>MyPortfolio</Text>
     </Container>
   );
 }
