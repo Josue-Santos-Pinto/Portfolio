@@ -18,8 +18,8 @@ export function About() {
 
   return (
     <S.Container>
+      <StatusBar backgroundColor="#fff" barStyle="dark-content" />
       <S.Scroller showsVerticalScrollIndicator={false}>
-        <StatusBar barStyle="light-content" />
         <S.HeaderArea>
           <S.HeaderSubTitle>Olá, eu sou o Josué</S.HeaderSubTitle>
           <S.HeaderTitle>Desenvolvedor</S.HeaderTitle>
