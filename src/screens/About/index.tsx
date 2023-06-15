@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styles';
-import { Linking, Image, View } from 'react-native';
+import { Linking, Image, View, ImageBackground } from 'react-native';
 import storage from '@react-native-firebase/storage';
 import * as Animatable from 'react-native-animatable';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export function About() {
   const [link, setLink] = useState('');
+  const linkedin = 'https://www.linkedin.com/in/josuesantospinto/';
+  const github = 'https://github.com/Josue-Santos-Pinto';
 
   useEffect(() => {
     const getUrl = async () => {
@@ -18,29 +20,34 @@ export function About() {
 
   return (
     <S.Container>
-      <S.Scroller showsVerticalScrollIndicator={false}>
-        <S.HeaderArea>
-          <S.HeaderSubTitle>Olá, eu sou o Josué</S.HeaderSubTitle>
-          <S.HeaderTitle>Desenvolvedor</S.HeaderTitle>
-          <S.HeaderTitle>React Native</S.HeaderTitle>
-          <S.HeaderSubTitle>
-            Tenho 23 anos sou um desenvolvedor mobile com 1 ano de experiência como freelancer{' '}
-          </S.HeaderSubTitle>
-        </S.HeaderArea>
+      <ImageBackground
+        source={require('../../assets/images/lampada.jpg')}
+        resizeMode="cover"
+        style={{ height: '100%', width: '100%' }}
+      >
+        <S.Scroller showsVerticalScrollIndicator={false}>
+          <S.HeaderArea>
+            <S.HeaderSubTitle>Olá, eu sou o Josué</S.HeaderSubTitle>
+            <S.HeaderTitle>Desenvolvedor</S.HeaderTitle>
+            <S.HeaderTitle>React Native</S.HeaderTitle>
+            <S.HeaderSubTitle>
+              Tenho 23 anos sou um desenvolvedor mobile com 1 ano de experiência como freelancer{' '}
+            </S.HeaderSubTitle>
+          </S.HeaderArea>
 
-        <S.SocialMediaArea>
-          <S.SocialMediaItem>
-            <FontAwesome name="github" color="#d1bf8c" size={50} />
-          </S.SocialMediaItem>
-          <S.SocialMediaItem>
-            <FontAwesome name="linkedin-square" color="#d1bf8c" size={50} />
-          </S.SocialMediaItem>
-          <S.SocialMediaItem>
-            <FontAwesome name="file-text" color="#d1bf8c" size={40} />
-          </S.SocialMediaItem>
-        </S.SocialMediaArea>
+          <S.SocialMediaArea>
+            <S.SocialMediaItem onPress={() => Linking.openURL(github)}>
+              <FontAwesome name="github" color="#d1bf8c" size={50} />
+            </S.SocialMediaItem>
+            <S.SocialMediaItem onPress={() => Linking.openURL(linkedin)}>
+              <FontAwesome name="linkedin-square" color="#d1bf8c" size={50} />
+            </S.SocialMediaItem>
+            <S.SocialMediaItem onPress={() => Linking.openURL(link)}>
+              <FontAwesome name="file-text" color="#d1bf8c" size={40} />
+            </S.SocialMediaItem>
+          </S.SocialMediaArea>
 
-        {/*<Animatable.View
+          {/*<Animatable.View
           delay={600}
           animation="fadeInUp"
           style={{
@@ -91,7 +98,8 @@ export function About() {
             <S.ButtonText>Baixar Curriculo</S.ButtonText>
           </S.ButtonArea>
         </Animatable.View>*/}
-      </S.Scroller>
+        </S.Scroller>
+      </ImageBackground>
     </S.Container>
   );
 }

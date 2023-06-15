@@ -56,20 +56,20 @@ export default () => {
           }}
         />
         <Tab.Screen
-          name="Certificate"
-          component={Certificate}
-          options={{
-            tabBarIcon: ({ color, focused }) => {
-              return <Icon name="home" size={22} color={focused ? '#1a192b' : '#aaa'} />;
-            },
-          }}
-        />
-        <Tab.Screen
           name="Projects"
           component={Projects}
           options={{
             tabBarIcon: ({ color, focused }) => {
-              return <Icon name="home" size={22} color={focused ? '#1a192b' : '#aaa'} />;
+              return <Icon name="lightbulb-o" size={22} color={focused ? '#1a192b' : '#aaa'} />;
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Certificate"
+          component={Certificate}
+          options={{
+            tabBarIcon: ({ color, focused }) => {
+              return <Icon name="certificate" size={22} color={focused ? '#1a192b' : '#aaa'} />;
             },
           }}
         />

@@ -3,7 +3,7 @@ import { ThemeStyles } from '../../styles';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: ${ThemeStyles.colors.bg};
+  background-color: #251e21;
   padding-horizontal: 30px;
 `;
 
