@@ -31,6 +31,10 @@ export default () => {
             height: 60,
             justifyContent: 'center',
           },
+          tabBarIndicatorStyle: {
+            backgroundColor: '#1a192b',
+          },
+          tabBarLabelStyle: { display: 'none' },
         }}
       >
         <Tab.Screen
@@ -38,9 +42,8 @@ export default () => {
           component={About}
           options={{
             tabBarIcon: ({ color, focused }) => {
-              return <Icon name="user" size={22} color={focused ? 'green' : '#272727'} />;
+              return <Icon name="user" size={22} color={focused ? '#1a192b' : '#aaa'} />;
             },
-            tabBarLabelStyle: { display: 'none' },
           }}
         />
         <Tab.Screen
@@ -48,9 +51,8 @@ export default () => {
           component={Skills}
           options={{
             tabBarIcon: ({ color, focused }) => {
-              return <Icon name="code" size={22} color={focused ? 'green' : '#272727'} />;
+              return <Icon name="code" size={22} color={focused ? '#1a192b' : '#aaa'} />;
             },
-            tabBarLabelStyle: { display: 'none' },
           }}
         />
         <Tab.Screen
@@ -58,9 +60,8 @@ export default () => {
           component={Certificate}
           options={{
             tabBarIcon: ({ color, focused }) => {
-              return <Icon name="home" size={22} color={focused ? 'green' : '#272727'} />;
+              return <Icon name="home" size={22} color={focused ? '#1a192b' : '#aaa'} />;
             },
-            tabBarLabelStyle: { display: 'none' },
           }}
         />
         <Tab.Screen
@@ -68,9 +69,8 @@ export default () => {
           component={Projects}
           options={{
             tabBarIcon: ({ color, focused }) => {
-              return <Icon name="home" size={22} color={focused ? 'green' : '#272727'} />;
+              return <Icon name="home" size={22} color={focused ? '#1a192b' : '#aaa'} />;
             },
-            tabBarLabelStyle: { display: 'none' },
           }}
         />
       </Tab.Navigator>
