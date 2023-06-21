@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, ActivityIndicator } from 'react-native';
+import { ScrollView, ActivityIndicator, Text } from 'react-native';
 import { SkillItem } from '../../components/SkillItem';
 import * as S from './styles';
 import database from '@react-native-firebase/database';
@@ -20,9 +20,9 @@ export function Projects() {
   }, []);
   return (
     <S.Container>
-      <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <S.HeaderArea>
-          <S.HeaderTitle>Principais Projetos</S.HeaderTitle>
+          <Text style={{ fontFamily: 'Sriracha-Regular', fontSize: 25 }}>Projetos</Text>
         </S.HeaderArea>
         <S.BodyArea>
           {projects.length > 0 && loading == false ? (

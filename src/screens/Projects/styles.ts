@@ -11,7 +11,9 @@ export const HeaderArea = styled.View`
   height: 80px;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  background-color: #fff;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
 `;
 
 export const HeaderTitle = styled.Text`
