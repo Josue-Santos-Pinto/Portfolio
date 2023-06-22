@@ -1,13 +1,10 @@
-import styled, { css } from 'styled-components/native';
-import { Platform, StatusBar, Dimensions } from 'react-native';
-import { ThemeStyles } from '../../styles';
-
-const statuBarHeight = StatusBar.currentHeight;
+import styled from 'styled-components/native';
+import { Dimensions } from 'react-native';
 
 export const Container = styled.View`
   flex: 1;
   min-height: ${Dimensions.get('window').height}px;
-  background-color: ${ThemeStyles.colors.bg};
+  background-color: #251e21;
 `;
 export const Scroller = styled.ScrollView``;
 

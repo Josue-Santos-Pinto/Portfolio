@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components/native';
 import { Modal, Linking, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import * as Animatable from 'react-native-animatable';
 
 type Props = {
@@ -12,7 +13,7 @@ type Props = {
     img: string;
     techs: string[];
     links: {
-      playstore?: string;
+      playstore: string;
       github: string;
     };
   };
@@ -21,9 +22,12 @@ type Props = {
 const Container = styled.View`
   width: 100%;
   min-height: 240px;
-  margin-vertical: 15px;
+  margin-vertical: 20px;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
 `;
 
 const ImageArea = styled.TouchableOpacity`
@@ -40,13 +44,13 @@ const ProjectImage = styled.Image`
 
 const ProjectName = styled.Text`
   font-size: 20px;
-  color: #fff;
+  margin-top: 10px;
   margin-bottom: 5px;
   font-weight: bold;
 `;
 const ProjectDesc = styled.Text`
   font-size: 15px;
-  color: #ccc;
+  color: #333;
   margin-bottom: 5px;
 `;
 
@@ -61,7 +65,7 @@ const TechsArea = styled.View`
 
 const TechsTitle = styled.Text`
   font-size: 15px;
-  color: #fff;
+  color: #333;
   font-weight: bold;
 `;
 const TechImgArea = styled.View`
@@ -76,6 +80,25 @@ const TechImgArea = styled.View`
 const Tech = styled.Image`
   width: 70%;
   height: 70%;
+`;
+const LinksArea = styled.View`
+  flex: 1;
+  flex-direction: row;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+`;
+const LinkButtonArea = styled.TouchableOpacity`
+  flex: 1;
+  flex-direction: row;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+`;
+const LinkIcon = styled.Image`
+  width: 80%;
+  height: 80%;
 `;
 
 export function ProjectItem({ data }: Props) {
@@ -97,6 +120,24 @@ export function ProjectItem({ data }: Props) {
                 </TechImgArea>
               ))}
           </TechsArea>
+          <LinksArea>
+            {data.links.github && (
+              <LinkButtonArea
+                style={{ backgroundColor: 'black' }}
+                onPress={() => Linking.openURL(data.links.github)}
+              >
+                <FontAwesome name="github" color="#fff" size={50} />
+              </LinkButtonArea>
+            )}
+            {data.links.playstore && (
+              <LinkButtonArea
+                style={{ backgroundColor: '#fff' }}
+                onPress={() => Linking.openURL(data.links.playstore)}
+              >
+                <LinkIcon source={require('../assets/images/playstore.png')} resizeMode="contain" />
+              </LinkButtonArea>
+            )}
+          </LinksArea>
         </>
       )}
     </Container>
