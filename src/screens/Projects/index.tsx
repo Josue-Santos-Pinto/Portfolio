@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView, ActivityIndicator, Text } from 'react-native';
-import { SkillItem } from '../../components/SkillItem';
 import * as S from './styles';
 import database from '@react-native-firebase/database';
 import { ProjectItem } from '../../components/ProjectItem';

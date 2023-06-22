@@ -1,9 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import { View } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import * as Animatable from 'react-native-animatable';
 
 type Props = {
   Title: 'Certificados' | 'Diplomas';

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './styles';
-import { Linking, Image, View, ImageBackground } from 'react-native';
+import { Linking, ImageBackground } from 'react-native';
 import storage from '@react-native-firebase/storage';
-import * as Animatable from 'react-native-animatable';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 export function About() {

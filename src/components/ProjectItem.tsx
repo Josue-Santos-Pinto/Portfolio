@@ -1,10 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components/native';
-import { Modal, Linking, View } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { Linking } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import * as Animatable from 'react-native-animatable';
 
 type Props = {
   data: {
