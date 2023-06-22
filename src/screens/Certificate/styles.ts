@@ -4,7 +4,6 @@ import { ThemeStyles } from '../../styles';
 export const Container = styled.View`
   flex: 1;
   background-color: #251e21;
-  padding-horizontal: 30px;
 `;
 
 export const HeaderArea = styled.View`
@@ -12,7 +11,9 @@ export const HeaderArea = styled.View`
   height: 80px;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  background-color: #fff;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
 `;
 
 export const HeaderTitle = styled.Text`
@@ -24,5 +25,5 @@ export const HeaderTitle = styled.Text`
 export const BodyArea = styled.View`
   flex: 1;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 `;
