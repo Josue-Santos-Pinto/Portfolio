@@ -26,6 +26,7 @@ const Area = styled.Text`
   font-size: 20px;
   font-weight: bold;
   margin-left: 10px;
+  color: #aaa;
 `;
 const ItemBody = styled.View`
   flex: 1;
@@ -50,6 +51,7 @@ const EducationTitleArea = styled.View`
 const EducationTitle = styled.Text`
   font-size: 18px;
   font-weight: bold;
+  color: #aaa;
 `;
 const CertificateName = styled.Text``;
 

@@ -21,7 +21,9 @@ export function Projects() {
     <S.Container>
       <ScrollView showsVerticalScrollIndicator={false}>
         <S.HeaderArea>
-          <Text style={{ fontFamily: 'Sriracha-Regular', fontSize: 25 }}>Projetos</Text>
+          <Text style={{ fontFamily: 'Sriracha-Regular', fontSize: 25, color: '#aaa' }}>
+            Projetos
+          </Text>
         </S.HeaderArea>
         <S.BodyArea>
           {projects.length > 0 && loading == false ? (

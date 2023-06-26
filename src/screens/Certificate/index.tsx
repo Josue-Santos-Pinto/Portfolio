@@ -9,7 +9,9 @@ export function Certificate() {
     <S.Container>
       <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
         <S.HeaderArea>
-          <Text style={{ fontFamily: 'Sriracha-Regular', fontSize: 25 }}>Formação</Text>
+          <Text style={{ fontFamily: 'Sriracha-Regular', fontSize: 25, color: '#aaa' }}>
+            Formação
+          </Text>
         </S.HeaderArea>
         <S.BodyArea>
           <CertificateItem Title="Certificados" />

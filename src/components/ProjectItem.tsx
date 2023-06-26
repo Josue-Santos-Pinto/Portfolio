@@ -44,6 +44,7 @@ const ProjectName = styled.Text`
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: bold;
+  color: #333;
 `;
 const ProjectDesc = styled.Text`
   font-size: 15px;

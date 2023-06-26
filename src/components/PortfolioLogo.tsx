@@ -12,7 +12,9 @@ const Container = styled.View`
 export default function PortfolioLogo() {
   return (
     <Container>
-      <Text style={{ fontFamily: 'RockSalt-Regular', fontSize: 20 }}>Josué Portfolio</Text>
+      <Text style={{ fontFamily: 'RockSalt-Regular', fontSize: 20, color: '#aaa' }}>
+        Josué Portfolio
+      </Text>
     </Container>
   );
 }

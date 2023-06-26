@@ -41,6 +41,7 @@ const TopArea = styled.View`
 const Area = styled.Text`
   font-size: 20px;
   font-weight: bold;
+  color: #333;
 `;
 
 const IconsArea = styled.View`
