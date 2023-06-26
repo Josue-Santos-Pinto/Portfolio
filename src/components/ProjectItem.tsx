@@ -54,11 +54,13 @@ const ProjectDesc = styled.Text`
 
 const TechsArea = styled.View`
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   margin-top: 5px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-horizontal: 20px;
+  flex-wrap: wrap;
 `;
 
 const TechsTitle = styled.Text`

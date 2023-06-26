@@ -53,7 +53,9 @@ const EducationTitle = styled.Text`
   font-weight: bold;
   color: #aaa;
 `;
-const CertificateName = styled.Text``;
+const CertificateName = styled.Text`
+  color: #aaa;
+`;
 
 export function CertificateItem({ Title }: Props) {
   const certificates = [

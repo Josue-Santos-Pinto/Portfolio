@@ -10,7 +10,7 @@ export const Scroller = styled.ScrollView``;
 
 export const HeaderArea = styled.View`
   width: 100%;
-  min-height: 280px;
+  min-height: 200px;
 
   margin-top: 5px;
   padding-vertical: 10px;
@@ -19,7 +19,7 @@ export const HeaderArea = styled.View`
 
 export const HeaderTitle = styled.Text`
   color: #fff;
-  font-size: 40px;
+  font-size: 38px;
   text-transform: uppercase;
   font-weight: bold;
 `;
@@ -34,8 +34,6 @@ export const SocialMediaArea = styled.View`
   height: 100px;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  margin-top: -80px;
 `;
 export const SocialMediaItem = styled.TouchableOpacity`
   width: 70px;

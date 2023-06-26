@@ -9,6 +9,13 @@ export function About() {
   const linkedin = 'https://www.linkedin.com/in/josuesantospinto/';
   const github = 'https://github.com/Josue-Santos-Pinto';
 
+  const bDate = new Date(1999, 11, 28);
+  const currentDate = new Date();
+
+  let diferenceDate = currentDate.getTime() - bDate.getTime();
+
+  let diferenceYears = Math.floor(diferenceDate / (1000 * 60 * 60 * 24 * 365));
+
   useEffect(() => {
     const getUrl = async () => {
       const url = await storage().ref('Curriculoreactnative.docx').getDownloadURL();
@@ -30,7 +37,8 @@ export function About() {
             <S.HeaderTitle>Desenvolvedor</S.HeaderTitle>
             <S.HeaderTitle>React Native</S.HeaderTitle>
             <S.HeaderSubTitle>
-              Tenho 23 anos sou um desenvolvedor mobile com 1 ano de experiência como freelancer{' '}
+              Tenho {diferenceYears} anos sou um desenvolvedor mobile com 7 meses de experiência
+              como freelancer
             </S.HeaderSubTitle>
           </S.HeaderArea>
 
