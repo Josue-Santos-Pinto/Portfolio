@@ -27,6 +27,7 @@ const Container = styled.View`
   background-color: #fff;
   margin-top: 20px;
   flex-direction: column;
+  padding-vertical: 20px;
 `;
 
 const TopArea = styled.View`

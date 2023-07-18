@@ -3,10 +3,11 @@ import { Dimensions } from 'react-native';
 
 export const Container = styled.View`
   flex: 1;
-  min-height: ${Dimensions.get('window').height}px;
   background-color: #251e21;
 `;
-export const Scroller = styled.ScrollView``;
+export const Scroller = styled.ScrollView`
+  flex: 1;
+`;
 
 export const HeaderArea = styled.View`
   width: 100%;

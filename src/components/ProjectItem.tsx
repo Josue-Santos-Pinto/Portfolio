@@ -131,7 +131,7 @@ export function ProjectItem({ data }: Props) {
             )}
             {data.links.playstore && (
               <LinkButtonArea
-                style={{ backgroundColor: '#fff' }}
+                style={{ backgroundColor: '#fefefe' }}
                 onPress={() => Linking.openURL(data.links.playstore)}
               >
                 <LinkIcon source={require('../assets/images/playstore.png')} resizeMode="contain" />
