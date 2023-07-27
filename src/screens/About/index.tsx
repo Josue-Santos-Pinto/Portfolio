@@ -18,7 +18,7 @@ export function About() {
 
   useEffect(() => {
     const getUrl = async () => {
-      const url = await storage().ref('Curriculoreactnative.docx').getDownloadURL();
+      const url = await storage().ref('Currículo - Josué Santos.pdf').getDownloadURL();
       setLink(url);
     };
     getUrl();

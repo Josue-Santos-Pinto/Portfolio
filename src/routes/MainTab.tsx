@@ -7,6 +7,7 @@ import { Skills } from '../screens/Skills';
 import { Projects } from '../screens/Projects';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import PortfolioLogo from '../components/PortfolioLogo';
+import { Contact } from '../screens/Contact';
 
 type TopTabNavigator = {
   About: undefined;
@@ -70,6 +71,15 @@ export default () => {
           options={{
             tabBarIcon: ({ color, focused }) => {
               return <Icon name="certificate" size={22} color={focused ? '#1a192b' : '#aaa'} />;
+            },
+          }}
+        />
+        <Tab.Screen
+          name="Contact"
+          component={Contact}
+          options={{
+            tabBarIcon: ({ color, focused }) => {
+              return <Icon name="envelope" size={22} color={focused ? '#1a192b' : '#aaa'} />;
             },
           }}
         />
